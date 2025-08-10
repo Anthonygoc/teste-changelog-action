@@ -9,6 +9,7 @@ id = e3742739-48e1-4155-96f3-a051794f094c
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"43759828-74de4367-0daa-428f-ad86-fa0f891ec870","path":"x-sig-api.json","metaData":{}}
 
 [config.relations.collections.metaData]
 

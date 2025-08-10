@@ -1,0 +1,1339 @@
+{
+	"info": {
+		"_postman_id": "74de4367-0daa-428f-ad86-fa0f891ec870",
+		"name": "x-sig-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "43759828-74de4367-0daa-428f-ad86-fa0f891ec870"
+	},
+	"item": [
+		{
+			"name": "Editais",
+			"item": [
+				{
+					"name": "Scraping Editais",
+					"id": "09f34496-fb58-4727-9aea-a9daf9e24a1c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gabriel.honda@ifmt.edu.br\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/editais/scraping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"editais",
+								"scraping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Edital",
+					"id": "269d08b8-a19f-4b9c-a223-30d9707dbb27",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"enabled\": true,\r\n    \"subscriptionPeriod\": {\r\n        \"startDate\": \"2024-12-31\",\r\n        \"endDate\": null\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/editais/35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"editais",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Editais",
+					"id": "ba1cd5f0-f027-461f-a972-a8ba93fced41",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gabriel.honda@ifmt.edu.br\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/editais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"editais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Opções de Editais",
+					"id": "8c1c2338-c897-4370-a6fd-4290e4bffc04",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gabriel.honda@ifmt.edu.br\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/editais/options",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"editais",
+								"options"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "2fcb7c0d-6051-44b8-a5e3-bd4191f58d1a"
+		},
+		{
+			"name": "Bolsistas",
+			"item": [
+				{
+					"name": "Buscar Bolsistas",
+					"id": "def573a3-4462-4bd8-9412-c32a1f7adf68",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gabriel.honda@ifmt.edu.br\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/bolsistas?edital-id=11&status=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"bolsistas"
+							],
+							"query": [
+								{
+									"key": "edital-id",
+									"value": "11"
+								},
+								{
+									"key": "status",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Bolsista por Id",
+					"id": "aeda1e70-6c2e-45aa-970a-e59d705ea3c4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gabriel.honda@ifmt.edu.br\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/bolsistas/26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"bolsistas",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Documento Bolsista",
+					"id": "378b8cc6-dd1a-46b4-b8e3-e7826a9b8bc7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "xsig-automacao-sigadoc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/bolsistas/29/documents/1296",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"bolsistas",
+								"29",
+								"documents",
+								"1296"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Bolsista",
+					"id": "d5ab3a60-3917-4650-9432-b1204b1695f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorization_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel José Curvo Honda\",\r\n    \"email\": \"gabrielhondacba@gmail.com\",\r\n    \"cpf\": \"050.333.751-05\",\r\n    \"tipoBolsa\": {\r\n        \"id\": 8,\r\n        \"modalidade\": \"Auxílio Técnico\",\r\n        \"sigla\": \"AT\",\r\n        \"categoriaNivel\": \"AT 3\",\r\n        \"valor\": 5000,\r\n        \"tempo\": null\r\n    },\r\n    \"editalId\": 6,\r\n    \"banco\": 1,\r\n    \"agencia\": \"0000-0\",\r\n    \"conta\": \"10101-1\",\r\n    \"nomeOrientador\": \"João Paulo Delgado Preti\",\r\n    \"dadosBancariosPreenchidosManualmente\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/bolsistas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"bolsistas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Bolsista Copy",
+					"id": "bfd6745b-9e07-4893-b37f-f28be5297769",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorization_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"PENDENTE_DOWNLOAD_DOCUMENTOS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/bolsistas/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"bolsistas",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Bolsista Copy",
+					"id": "4341133e-408b-412e-b076-fd19f482bf05",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorization_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "xsig-automacao-sigadoc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/bolsistas/28/documents/1359",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"bolsistas",
+								"28",
+								"documents",
+								"1359"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9729e60c-97e4-468f-a402-091e54323e2a"
+		},
+		{
+			"name": "Misc",
+			"item": [
+				{
+					"name": "[AUTO] Download assíncrono de documentos por edital",
+					"id": "22c67812-6aaf-4588-a4c0-c7ee741df624",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorization_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "xsig-automacao-sigadoc",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/automations/editais/6/documents-download",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"automations",
+								"editais",
+								"6",
+								"documents-download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[AUTO] Progresso download assíncrono de documentos por edital",
+					"id": "467a9786-615f-4209-8d73-8a0008011321",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorization_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "xsig-automacao-sigadoc"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/automations/editais/6/documents-download/3/tracking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"automations",
+								"editais",
+								"6",
+								"documents-download",
+								"3",
+								"tracking"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "007fea67-17b6-452e-a02c-5f69d0db65f4",
+							"name": "[AUTO] Download assíncrono de documentos Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/x-sig/api/v0.1.0/automation/edital/11/documents-download/3/progress",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"x-sig",
+										"api",
+										"v0.1.0",
+										"automation",
+										"edital",
+										"11",
+										"documents-download",
+										"3",
+										"progress"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin",
+									"uuid": "fea96ad1-bbb7-4847-9fef-2b8b15721a87"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method",
+									"uuid": "61c66c47-3404-45be-acb1-f08e62c4f7d5"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers",
+									"uuid": "aa17b51b-2afa-4dbc-8f6c-e879065bd5ec"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"uuid": "7e5aec80-5afa-4cc7-b2f0-baac49e77863"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0",
+									"uuid": "c4aac69b-ed41-4d48-bdd5-f7355047b0f1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"uuid": "9e1015e5-7047-4d13-89a1-8bdbd7868be7"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache",
+									"uuid": "7731e0ca-b0a2-43a4-be20-e15688190088"
+								},
+								{
+									"key": "Expires",
+									"value": "0",
+									"uuid": "06f3349d-24c3-4c6c-bfe6-847decd8104d"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY",
+									"uuid": "666652db-dcac-4ecc-b3fc-a1ad0ce69abf"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "d4465316-6be2-41db-8f26-255e0fe49975"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"uuid": "17445013-1ca5-481e-95fa-c56da7c11457"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Jan 2025 19:32:16 GMT",
+									"uuid": "bd40c8b8-c5f8-43e9-81c0-646e6c827960"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60",
+									"uuid": "7790d6d6-ef6c-406e-914e-e905579ab049"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"uuid": "3080ae7d-4922-4b92-84c1-8dd4eab1f394"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"createdAt\": \"2025-01-01T15:26:25.902935\",\n    \"updatedAt\": \"2025-01-01T15:26:25.902935\",\n    \"editalId\": 11,\n    \"status\": \"SOLICITADO\",\n    \"statistics\": {\n        \"totalBolsistas\": 10,\n        \"totalBolsistasProcessados\": 0,\n        \"totalBolsistasComErro\": 6,\n        \"totalBolsistasPendentes\": 4,\n        \"percentual\": 60\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[AUTO] Download assíncrono de documentos por bolsista",
+					"id": "733c6289-74c3-41e0-965e-4f23466f9776",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorization_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/automations/bolsistas/33/documents-download",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"automations",
+								"bolsistas",
+								"33",
+								"documents-download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[AUTO] Progresso download assíncrono de documentos por edital Copy",
+					"id": "8bbb3cfd-a33a-444a-925b-1c2b206de4cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorization_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/automations/bolsistas/1/documents-download/22/tracking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"automations",
+								"bolsistas",
+								"1",
+								"documents-download",
+								"22",
+								"tracking"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "044574fa-faa0-445c-a65f-9f93d1c3dec8",
+							"name": "[AUTO] Download assíncrono de documentos Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/x-sig/api/v0.1.0/automation/edital/11/documents-download/3/progress",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"x-sig",
+										"api",
+										"v0.1.0",
+										"automation",
+										"edital",
+										"11",
+										"documents-download",
+										"3",
+										"progress"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin",
+									"uuid": "394d69fe-1dbb-43fb-8d2d-953d6e0116af"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method",
+									"uuid": "f48c5e51-45dd-4a9a-af7b-57d6cf8e5197"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers",
+									"uuid": "69b8840a-fddb-46e2-8e9c-32715dfbbca8"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"uuid": "c8eef3dc-fa98-42d1-b4e5-eaba51e36c76"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0",
+									"uuid": "9d5b452e-2797-43fc-a36c-f28c7033bc14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"uuid": "8cee06ee-5f00-4f3c-bb05-0cc4caa4e6e5"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache",
+									"uuid": "92bc416a-b071-4142-b14a-e88e499d90e2"
+								},
+								{
+									"key": "Expires",
+									"value": "0",
+									"uuid": "5ba5160b-2a02-4989-b1da-800a45c3e2e6"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY",
+									"uuid": "0c6b6dac-9406-4651-a84a-c7d0edb7be19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "ce4b3ebd-4eb1-4ff0-a286-0def00fc3f1b"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"uuid": "9e1decfc-93d1-4438-b0c0-c6bfc6fe068b"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Jan 2025 19:32:16 GMT",
+									"uuid": "5344dcfc-9d85-4d51-b12b-df7fd6be6a61"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60",
+									"uuid": "d55c2c2e-ac2b-4f99-8fd1-77fec21fbe64"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"uuid": "5efeffc9-66f1-4dfe-bd1b-4acb75be99d6"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"createdAt\": \"2025-01-01T15:26:25.902935\",\n    \"updatedAt\": \"2025-01-01T15:26:25.902935\",\n    \"editalId\": 11,\n    \"status\": \"SOLICITADO\",\n    \"statistics\": {\n        \"totalBolsistas\": 10,\n        \"totalBolsistasProcessados\": 0,\n        \"totalBolsistasComErro\": 6,\n        \"totalBolsistasPendentes\": 4,\n        \"percentual\": 60\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[AUTO] Vincular bolsista ao edital",
+					"id": "43c3bacb-3ae5-42cb-897f-a678d44f0b16",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorization_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "xsig-automacao-sigadoc",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/automations/bolsistas/12/bind-to/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"automations",
+								"bolsistas",
+								"12",
+								"bind-to",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "31d8efdb-f98d-4d11-a9cf-c381bc3b9db7"
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Detalhes do Usuário Logado",
+					"id": "7d7483fe-3b8b-4f7e-ae83-a9dec7b2e38f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "qytlbeg-DeNhhNEtTzcnv5RN-VeH2ONHWVN-lSCl_dU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gabriel.honda@ifmt.edu.br\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/users/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gerar API Key",
+					"id": "7df1527b-9973-4946-95fd-4fafbc681b03",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/users/:userId/api-key/generate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"users",
+								":userId",
+								"api-key",
+								"generate"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"id": "59cfebd7-2b71-4d54-9c73-c89f7d2d682d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/users/:userId/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"users",
+								":userId",
+								"reset-password"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "8a375bee-81ff-40af-8a51-d8f535911246"
+		},
+		{
+			"name": "Processos",
+			"item": [
+				{
+					"name": "Consultar bolsistas disponiveis para criação do processo",
+					"id": "03b439aa-bb57-4d1b-a910-78bc71d951e0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "xsig-automacao-sigadoc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/processos/bolsistas?size=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"processos",
+								"bolsistas"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Bruno Radeck Cassiano Borges",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar documento bolsista",
+					"id": "76dad250-613d-4d1e-a28b-dff027cdab25",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "xsig-automacao-sigadoc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/bolsistas/29/documents/1415",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"bolsistas",
+								"29",
+								"documents",
+								"1415"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar processo",
+					"id": "9988593b-bb50-41dc-89ec-2341f241fa7d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "xsig-automacao-sigadoc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 15,\r\n    \"bolsistaId\": 30,\r\n    \"status\": \"PENDENTE_AUTUACAO_OFICIO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/x-sig/api/v1.0.0/processos/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"x-sig",
+								"api",
+								"v1.0.0",
+								"processos",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9675b788-10a7-4d88-89a9-3eb8a74f02b4"
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"let token = jsonData.token;\r",
+							"pm.collectionVariables.set('authorization_token', token);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"id": "66f344b9-5048-4e6c-9ac8-33422ecb3a8e"
+					}
+				}
+			],
+			"id": "5b257f7b-fd37-459c-8d66-16fe996530d9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/x-sig/api/v1.0.0/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"x-sig",
+						"api",
+						"v1.0.0",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"let token = jsonData.token;\r",
+							"pm.collectionVariables.set('authorization_token', token);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"id": "d77f380c-6e1d-49c6-8c15-37138b141d8a"
+					}
+				}
+			],
+			"id": "0ccf9a06-1730-4080-9c76-141576588a47",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU5JU1RSQURPUiJ9XSwic3ViIjoiYWRtaW5AYWRtaW4uY29tIiwiaWF0IjoxNzUxMTEzMjg4LCJleHAiOjE3NTExMTMyODh9.y7WXneapkd8p4new_rF1QuK8diAvB3imadEUU7RynvM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/x-sig/api/v1.0.0/auth/refresh-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"x-sig",
+						"api",
+						"v1.0.0",
+						"auth",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Version endpoint",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"let token = jsonData.token;\r",
+							"pm.collectionVariables.set('authorization_token', token);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"id": "ef8d5c8b-0d5e-44cb-bdf7-2d6c4a0f83a5"
+					}
+				}
+			],
+			"id": "0534514e-1be8-4ab5-9380-0a16d5a052f8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU5JU1RSQURPUiJ9XSwic3ViIjoiYWRtaW5AYWRtaW4uY29tIiwiaWF0IjoxNzUxMTEzMjg4LCJleHAiOjE3NTExMTMyODh9.y7WXneapkd8p4new_rF1QuK8diAvB3imadEUU7RynvM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/x-sig/api/v1.0.0/version",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"x-sig",
+						"api",
+						"v1.0.0",
+						"version"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{authorization_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "c31b79a6-e049-4388-ba74-a1c2b9e524bd"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "22bf432b-8164-4335-bf80-bbe54c10141f"
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "34d36d84-ed92-45ab-836e-0f2143bc50d4",
+			"key": "baseUrl",
+			"value": "http://localhost:8080/x-sig/api/v0.0.1",
+			"type": "string"
+		},
+		{
+			"id": "f17d2d3d-975c-49e5-a758-50011459382b",
+			"key": "authorization_token",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnYWJyaWVsLmhvbmRhQGlmbXQuZWR1LmJyIiwiaWF0IjoxNzM1NDEzODczLCJleHAiOjE3MzU0MTc0NzN9.oW0awrHlxvHB0cUS7beA-lRYAPfNM8xhsItS9_VbLKQ",
+			"type": "string"
+		},
+		{
+			"id": "92d19a7a-6864-4735-b252-b041623d9bc7",
+			"key": "bolsista",
+			"value": "Deyse Elisangela Miranda da Silva",
+			"type": "string"
+		}
+	]
+}
