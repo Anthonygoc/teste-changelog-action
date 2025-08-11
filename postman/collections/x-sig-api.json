@@ -20,7 +20,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"gabriel.honda@ifmt.edu.br\",\r\n    \"password\": \"123456789\"\r\n}",
+							"raw": "{\r\n    \"email\": \"gabriel.honda@ifmt.edu.br\",\r\n    \"password\": \"1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
